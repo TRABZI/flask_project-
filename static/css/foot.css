@@ -1,0 +1,12 @@
+html,body{
+    background-image:url(../images/nike-football-stadium.jpg);
+    background-repeat: no-repeat;
+}
+
+p{
+    color:rgb(208, 127, 255)
+}
+
+h1{
+    color: rgb(157, 255, 0);
+}

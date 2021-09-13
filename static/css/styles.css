@@ -1,0 +1,13 @@
+html,body{
+    background-image:url(../images/stade.jpg);
+    background-repeat: no-repeat;
+    background-size:     cover;                     
+ }
+
+p{
+    color:rgb(230, 62, 20)
+}
+
+h1{
+    color: rgb(0, 0, 0);
+}
