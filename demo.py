@@ -1,7 +1,4 @@
-
-# import code1
-# code1.display("hello world")
-# print(__name__)
+# @Autor : TRABZI Mohammed Amine 
 
 
 from flask import Flask, render_template,request
