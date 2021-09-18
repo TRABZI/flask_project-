@@ -7,9 +7,4 @@ to run the application :
 	* python schema.py
 	* python demo.py
 2) got to ur browser and write : http://localhost:7000/
-3) Log-in using : 
-		username = TRABZI 
-		password = amine 
-
-   => If you enter bad username and password u get error message and u stay in index.html
-   => If the username and passeword are correct u get another html page 
+3) You can sign-up then log-in 
