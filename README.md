@@ -1,6 +1,6 @@
-Hello to Flask Tutorial : 
+# Hello to full stack dev in Flask & Python : 
 
-to run the application : 
+## to run the application : 
 
 1) In your terminal write : 
 	* python seed.py
