@@ -16,10 +16,11 @@ def home():
 
         db_password=model.check_pw(username)
         # if username=='TRABZI' and password=='amine':
-        if password==db_password:
-            # login_msg='Login Successful'
-            msg=model.show_color(username)
-            return render_template('foot.html',message=msg)
+        if db_password!=None:
+            if password==db_password[0]:
+                # login_msg='Login Successful'
+                msg=model.show_color(username)
+                return render_template('foot.html',message=msg)
         else:
             error_msg='error!'
             return render_template('index.html',message=error_msg)

@@ -23,7 +23,7 @@ def check_pw(username):
     cursor.execute(
         """ SELECT passeword FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
     )
-    passeword=cursor.fetchone()[0]
+    passeword=cursor.fetchone()
 
     connection.commit()
     cursor.close()
