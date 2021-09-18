@@ -38,7 +38,7 @@ def signup(username,passeword,favorit_color):
     cursor.execute(
         """ SELECT passeword FROM users WHERE username='{username}';""".format(username=username)
     )
-    exist=cursor.fetchone()[0]
+    exist=cursor.fetchone()
     
     if exist is None:
         cursor.execute(

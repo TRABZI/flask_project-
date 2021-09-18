@@ -21,6 +21,9 @@ def home():
                 # login_msg='Login Successful'
                 msg=model.show_color(username)
                 return render_template('foot.html',message=msg)
+            else:
+                error_msg='error!'
+                return render_template('index.html',message=error_msg)
         else:
             error_msg='error!'
             return render_template('index.html',message=error_msg)
