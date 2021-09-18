@@ -7,12 +7,12 @@ def show_color(username):
     cursor.execute(
         """ SELECT passeword FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
     )
-    color=cursor.fetchone()[0]
+    extracted=cursor.fetchone()[0]
 
     connection.commit()
     cursor.close()
     connection.close()
-    message="'{username}'s favorite color is '{color}'.".format(username=username, color=color)
+    message="[Info]: '{username}', '{extracted}'.".format(username=username, extracted=extracted)
 
     return message
 
