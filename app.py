@@ -11,8 +11,15 @@ db_users=model.check_users()
 def before_request():
     g.user=None
     if 'user' in session:
-        user=[usr for usr in db_users if usr==session['user']][0]
-        g.user = user
+        user=[usr for usr in db_users if usr==session['user']]
+        if user:
+        	g.user = user[0]
+        	
+@app.route('/logout')
+def logout():
+    session.pop('user',None)
+    return redirect(url_for('login'))
+
 
 @app.route('/', methods=['GET','POST'])
 def login():
