@@ -1,12 +1,18 @@
-# @Autor : TRABZI Mohammed Amine 
+# @Author : TRABZI Mohammed Amine 
 
-
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,session,redirect,url_for,g
 import model
+import os
+app = Flask(__name__) # Declare flask application 
 
-app = Flask(__name__)
+# app.secret_key=os.urandom(24)
+# user=model.check_users
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/home',methods=['GET','POST'])
+def homepage():
+    return render_template('homepage.html')
+
+@app.route('/login',methods=['GET','POST'])
 def home():
     if request.method=='GET':
         return render_template('index.html',message='welcome')
@@ -29,7 +35,7 @@ def home():
             return render_template('index.html',message=error_msg)
 
 
-@app.route('/GETfootball',methods=['GET'])
+@app.route('/getfoot',methods=['GET','POST'])
 def foot():
     return render_template('foot.html')
 

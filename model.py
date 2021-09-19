@@ -51,3 +51,24 @@ def signup(username,passeword,favorit_color):
         return('User already existed !!!')
 
     return 'You have signed up successfully !!!'
+
+
+
+def check_users():
+    connection=sqlite3.connect('flask_tuto.db',check_same_thread=False)
+    cursor=connection.cursor()
+    
+    cursor.execute(
+        """ SELECT username FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
+    )
+    db_users=cursor.fetchall()
+    users=[]
+
+    for i in range(len(db_users)):
+        db_users.append(db_users[i][0])
+
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+    return db_users
