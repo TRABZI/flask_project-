@@ -10,6 +10,5 @@
 3) You can sign-up or log-in :
 	* If you sign-up with an existing account you get message that account already exists 
 	* Else : Your sign-up is saved 
-	* Then : you can log-in using your username, password. If the informations of log-in are not correct you get an error message
-	
+	* Then : you can log-in using your username, password. If the informations of log-in are not correct you get redirected to the login page
 More improvements will be committed into this repository later ......
