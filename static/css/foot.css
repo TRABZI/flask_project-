@@ -1,6 +1,8 @@
-html,body{
-    background-image:url(../images/nike-football-stadium.jpg);
+body{
+    background-image:url(../images/stade.jpg);
     background-repeat: no-repeat;
+    background-size:cover;                     
+
 }
 
 p{

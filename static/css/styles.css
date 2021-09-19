@@ -1,13 +1,13 @@
 html,body{
-    background-image:url(../images/stade.jpg);
+    background-image:url(../images/background.jpg);
     background-repeat: no-repeat;
-    background-size:     cover;                     
+    background-size:cover;                     
  }
 
 p{
     color:rgb(255, 0, 0)
 }
 
-h1{
+a,h1{
     color: rgb(0, 255, 170);
 }

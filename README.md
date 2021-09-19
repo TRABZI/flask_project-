@@ -6,7 +6,7 @@
 	* python seed.py
 	* python schema.py
 	* python demo.py
-2) got to ur browser and write : http://localhost:7000/
+2) got to ur browser and write : http://localhost:6060/
 3) You can sign-up or log-in :
 	* If you sign-up with an existing account you get message that account already exists 
 	* Else : Your sign-up is saved 

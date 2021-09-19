@@ -2,14 +2,16 @@
 
 {% block main %}
 
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="static/css/foot.css">
-    <title>index</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/css/foot.css">
+        <title>index</title>
+    </head>
 
+    <h1> Page session:</h1>
+    <p>[Session username is]: {{g.user}}</p>
     <a href="/logout">logout</a>
-    <h1>Foot page</h1>
-    <p>login username is: {{g.user}}</p>
-    <p>{{message}}</p>
+    
 {% endblock main%}
+
+
