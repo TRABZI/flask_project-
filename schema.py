@@ -8,7 +8,7 @@ cursor.execute(
     """CREATE TABLE users(
         pk INTEGER PRIMARY KEY AUTOINCREMENT,
         username VARCHAR(16),
-        passeword VARCHAR(32),
+        password VARCHAR(32),
         favorit_color VARCHAR(32),
         favorit_club VARCHAR(32)
 

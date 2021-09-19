@@ -6,7 +6,7 @@ cursor=connection.cursor()
 cursor.execute(
     """ INSERT INTO users(
             username,
-            passeword,
+            password,
             favorit_color
             )VALUES(
                 'TRABZI',
@@ -18,7 +18,7 @@ cursor.execute(
 cursor.execute(
     """ INSERT INTO users(
             username,
-            passeword,
+            password,
             favorit_color
             )VALUES(
                 'Dellys',

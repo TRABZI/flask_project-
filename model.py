@@ -5,7 +5,7 @@ def show_color(username):
     cursor=connection.cursor()
     
     cursor.execute(
-        """ SELECT passeword FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
+        """ SELECT password FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
     )
     extracted=cursor.fetchone()[0]
 
@@ -21,28 +21,28 @@ def check_pw(username):
     cursor=connection.cursor()
     
     cursor.execute(
-        """ SELECT passeword FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
+        """ SELECT password FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
     )
     passeword=cursor.fetchone()
-
+    
     connection.commit()
     cursor.close()
     connection.close()
 
     return passeword
 
-def signup(username,passeword,favorit_color):
+def signup(username,password,favorit_color):
     connection=sqlite3.connect('flask_tuto.db',check_same_thread=False)
     cursor=connection.cursor()
 
     cursor.execute(
-        """ SELECT passeword FROM users WHERE username='{username}';""".format(username=username)
+        """ SELECT password FROM users WHERE username='{username}';""".format(username=username)
     )
     exist=cursor.fetchone()
     
     if exist is None:
         cursor.execute(
-        """ INSERT INTO users (username,passeword,favorit_color)VALUES('{username}','{passeword}','{favorit_color}');""".format(username=username,passeword=passeword,favorit_color=favorit_color))
+        """ INSERT INTO users (username,password,favorit_color)VALUES('{username}','{password}','{favorit_color}');""".format(username=username,password=password,favorit_color=favorit_color))
         connection.commit()
         cursor.close()
         connection.close()
@@ -52,23 +52,23 @@ def signup(username,passeword,favorit_color):
 
     return 'You have signed up successfully !!!'
 
-
-
 def check_users():
     connection=sqlite3.connect('flask_tuto.db',check_same_thread=False)
     cursor=connection.cursor()
     
     cursor.execute(
-        """ SELECT username FROM users WHERE username='{username}' ORDER BY pk DESC;""".format(username=username)
+        """ SELECT username FROM users ORDER BY pk DESC;"""
     )
+
     db_users=cursor.fetchall()
     users=[]
 
     for i in range(len(db_users)):
-        db_users.append(db_users[i][0])
+        usr=db_users[i][0]
+        users.append(usr)
 
     connection.commit()
     cursor.close()
     connection.close()
 
-    return db_users
+    return users
